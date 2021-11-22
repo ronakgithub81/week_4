@@ -8,16 +8,86 @@
     <meta name="author" content="Ronak Sheth">
     <meta name="description" content="forms">
     <meta charset="UTF-8">
-    hello 123
+    
 
 </head>
 
 <body>
     <!-- this is for form demo -->
     <form name = "form1" method = "get" action = "secondPage.html" ><!-- method can be get or post-->
-        Username : <input type="text" name = "fn" maxlength ="5" size = "10"><br><br>
-        Password : <input type="password" name = "ln" autofocus maxlength = "5" placeholder="enter 8 character password"><br><br>
-        Email    : <input type = "email" name="myemail" disabled><br><br>
+        <!--explicit label-->
+        <label for="t1">Username :</label><!-- for attribute will have the value of input id attribute-->
+        <input type="text" name = "un" maxlength ="5" size = "10" id = "t1" required><br><br>
+        
+        <!--below is implicit label-->
+        <label>Password : 
+            <input type="password" name = "pswd" autofocus maxlength = "5" 
+            placeholder="enter 8 character password" required><br><br>
+        </label>
+        <br><br>
+            AGe: <input type = "number" name="age" min="16" max="90" step ="10">
+
+            <br><br>
+            Email    : <input type = "email" name="myemail" disabled ><br><br>
+
+        <p> Which is the capital of Ontario?</p>
+        <fieldset>
+            <legend> Your Options:</legend>
+            <input type ="radio" name="answer" value ="TRNT" id ="r1"> 
+            <label for ="r1">Toronto</label><br>
+            <input type ="radio" name="answer" value ="Sudbury" id ="r2">
+            <label for ="r2">Sudbury</label><br>
+            <input type ="radio" name="answer" value ="OTW" id ="r3">
+            <label for ="r3">Ottawa</label><br>
+            <input type ="radio" name="answer" value ="OAK" id ="r4"> 
+            <label for ="r4">Oakville</label><br>
+        </fieldset>    
+        <p> </p>
+        <fieldset>
+            <legend> Select your hobbies :</legend>
+            <input type ="checkbox" name="chk1" value ="Swim" id="c1"> 
+            <label for ="c1">Swimming</label><br>
+            <input type ="checkbox" name="chk2" value ="Dancing" id="c2"> 
+            <label for ="c2">Dancing</label><br>
+            <input type ="checkbox" name="chk3" value ="Reading" id="c3">
+            <label for ="c3">Reading</label><br>
+            <input type ="checkbox" name="chk4" value ="Writing" id="c4">
+            <label for ="c4">Writing</label><br> 
+        </fieldset>
+        <p> Select your favourite city : </p>
+        <select name ="mycity" multiple size="2">
+            <optgroup label ="Ontario">
+                <option>Toronto</option>
+                <option>Ottawa</option>
+            </optgroup>
+            <optgroup label ="Quebec">
+                <option>Monteal</option>
+                <option>Quebec City</option>
+            </optgroup>
+            <optgroup label ="Alerta">
+                <option>Edmonton</option>
+                <option>Calgary</option>
+            </optgroup>
+            <optgroup label ="B.C.">
+                <option>Vancouver</option>
+                <option>Whistler</option>
+            </optgroup>
+        </select>
+
+        <p> Your comments here: </p>
+        <textarea name="comments" rows="10"  cols ="50" placeholder="Enter your comments here">
+        </textarea>
+        <br><br>
+        Rate your experience :
+        <input type = "range" min=0 max=90 step="10">
+        <br><br>
+        <label for="f1">Choose the file: </label>
+        <input type="file" name="myfile" id="f1">
+        <br><br>
+        <br><br>
+        <label for="u1">URL : </label>
+        <input type="url" name="myurl" id="u1" autocomplete="on">
+        <br><br>
         <input type ="submit" name ="button1" value ="Click here to submit"><br><br>
         <input type = "reset" name  = "button2" value ="clear">
         <input type="button" name="button3" value="click Me!!!" disabled>
@@ -26,6 +96,7 @@
             <img src="puzzle1.jpg" width="30" height ="30" > Add to Cart
         </button>
     </form>
+    <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br>
 </body>
 
 </html>
